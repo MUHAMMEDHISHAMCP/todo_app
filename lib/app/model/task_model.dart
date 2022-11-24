@@ -7,8 +7,11 @@ class TaskModel{
 String? id;
 @HiveField(2)
 String? tasks;
+@HiveField(3)
+bool? isDone;
  TaskModel({
   required this.id,
-  required this.tasks
+  required this.tasks,
+  this.isDone
  });
 }

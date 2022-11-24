@@ -4,7 +4,7 @@ import 'package:todo_app/app/model/task_model.dart';
 import 'package:todo_app/app/screens/home/home_screen.dart';
 
 void main() async {
- await Hive.initFlutter();
+  await Hive.initFlutter();
   if (!Hive.isAdapterRegistered(TaskModelAdapter().typeId)) {
     Hive.registerAdapter(TaskModelAdapter());
   }
@@ -14,7 +14,6 @@ void main() async {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -23,8 +22,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home:  HomeScreen(),
+      home: HomeScreen(),
     );
   }
 }
-

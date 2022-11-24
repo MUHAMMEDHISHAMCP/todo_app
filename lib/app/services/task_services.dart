@@ -7,14 +7,14 @@ class TaskServices{
 
 static addTasks(TaskModel data)async{
 final taskDB = await Hive.openBox<TaskModel>('task_db');
-taskDB.add(data);
+taskDB.put(data.id,data);
 getAlltasks();
 }
 
 
-static deleteTask(int id)async{
+static deleteTask(String id)async{
 final taskDB = await Hive.openBox<TaskModel>('task_db');
-taskDB.deleteAt(id);
+taskDB.delete(id);
 getAlltasks();
 }
 static getAlltasks()async{
