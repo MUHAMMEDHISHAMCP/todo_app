@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:todo_app/app/controller/task_controller.dart';
 import 'package:todo_app/app/screens/home/widgets/todo_list.dart';
-import 'package:todo_app/app/services/task_services.dart';
 import 'package:todo_app/constant/colors.dart';
 
 class HomeScreen extends StatelessWidget {

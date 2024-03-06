@@ -12,14 +12,14 @@ class TaskController extends GetxController {
       return;
     }
 
-    final TaskModel ss = TaskModel(
+    final TaskModel task = TaskModel(
         id: DateTime.now().millisecondsSinceEpoch.toString(),
         tasks: adingControleer.text,
         isDone: false);
    
-    TaskServices.addTasks(ss);
+    TaskServices.addTasks(task);
     // getDatas(data: ss);
-    print(ss.tasks);
+    print(task.tasks);
   }
 
   void deleteTAsk(String id){
