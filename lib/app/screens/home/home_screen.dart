@@ -60,7 +60,7 @@ final controller = Get.put(TaskController());
                           spreadRadius: 0.0)
                     ]),
                     child:  TextField(
-                      controller: controller.adingControleer,
+                      controller: controller.taskTextController,
                       decoration: const InputDecoration(
                           hintText: 'Add Tasks', border: OutlineInputBorder()),
                     ),
@@ -73,7 +73,7 @@ final controller = Get.put(TaskController());
                   onTap: (){
                    controller.addTasks(context);
                     FocusScope.of(context).requestFocus( FocusNode());
-                    controller.adingControleer.clear();
+                    controller.taskTextController.clear();
                   },
                   child: Container(
                     padding: const EdgeInsets.all(8.0),
