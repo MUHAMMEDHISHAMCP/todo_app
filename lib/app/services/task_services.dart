@@ -18,7 +18,7 @@ taskDB.delete(id);
 getAlltasks();
 }
 static getAlltasks()async{
-final getTAskDb = await Hive.openBox<TaskModel>('task_db');
-Get.put(TaskController()).getDatas(data: getTAskDb.values);
+final getTaskDb = await Hive.openBox<TaskModel>('task_db');
+Get.put(TaskController()).getDatas(data: getTaskDb.values);
 }
 }
